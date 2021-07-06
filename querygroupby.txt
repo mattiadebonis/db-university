@@ -1,0 +1,4 @@
+SELECT YEAR(`enrolment_date`) AS "Year",COUNT(*) AS "Subscribers" FROM `students` GROUP BY YEAR(`enrolment_date`)
+SELECT `office_address` AS "Address" ,COUNT(*) AS "Offices" FROM `teachers` GROUP BY `office_address`
+SELECT `exam_id` AS "idExams", AVG(`vote`) AS "sumExam" FROM `exam_student` GROUP BY `exam_id`
+SELECT `departments`. `name` AS "Departments", COUNT(*) AS "numberCourses" FROM `departments` INNER JOIN `degrees` ON `departments`.`id` = `degrees`.`department_id` GROUP BY `departments`. `name`
